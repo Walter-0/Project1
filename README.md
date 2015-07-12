@@ -1,5 +1,5 @@
-Project 1: Survival Trivia
-This is a game of skill, a test of survival, and a comedy for the masses. Your goal is to survive by answering as many questions correctly as possible, or risk execution at the hands of a twisted game master.
+Project 1: Internet Trivia
+This is a game of skill and comedy to test your knowledge about the internet. No, not how the internet works, but its integral and often meaningless content.
 
 User Stories:
 1. As a user, I should be able to input answers to prompted questions.
@@ -8,3 +8,13 @@ User Stories:
 4. As a user, I should be able to see my score at the end of the game.
 5. As a user, I should be able to compare my scores to others'.
 6. As a user, I should be able to enter my name.
+
+
+HTML/CSS pseudocode
+-create divs for each question/card
+-create button to start new game
+-create score card
+-** create button to see high scores **
+
+JS pseudocode
+-
