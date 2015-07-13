@@ -51,8 +51,8 @@ $(".cards div").eq(0).click(function(){
 })
 
 $(".cards div").eq(1).click(function(){
-    var question1 = prompt("Is Pluto a planet?")
-    if (question1.toLowerCase() == "no") {
+    var question1 = prompt("Should you run from or fight a black bear? (run/fight)")
+    if (question1.toLowerCase() == "fight") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(1).css("background-color", "chartreuse")
@@ -76,8 +76,8 @@ $(".cards div").eq(1).click(function(){
 })
 
 $(".cards div").eq(2).click(function(){
-    var question2 = prompt("Is Pluto a planet?")
-    if (question2.toLowerCase() == "no") {
+    var question2 = prompt("Will a 12 lb bowling ball sink or float in the ocean? (sink/float)")
+    if (question2.toLowerCase() == "float") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(2).css("background-color", "chartreuse")
@@ -101,8 +101,8 @@ $(".cards div").eq(2).click(function(){
 })
 
 $(".cards div").eq(3).click(function(){
-    var question3 = prompt("Is Pluto a planet?")
-    if (question3.toLowerCase() == "no") {
+    var question3 = prompt("Middle age alchemists wanted to turn lead into what metal? (silver/gold/platinum)")
+    if (question3.toLowerCase() == "gold") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(3).css("background-color", "chartreuse")
@@ -126,8 +126,8 @@ $(".cards div").eq(3).click(function(){
 })
 
 $(".cards div").eq(4).click(function(){
-    var question4 = prompt("Is Pluto a planet?")
-    if (question4.toLowerCase() == "no") {
+    var question4 = prompt("If someone is tripping, they are doing what? (drugs/falling down/acting foolish)")
+    if (question4.toLowerCase() == "drugs") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(4).css("background-color", "chartreuse")
@@ -150,8 +150,8 @@ $(".cards div").eq(4).click(function(){
     }
 })
 $(".cards div").eq(5).click(function(){
-    var question5 = prompt("Is Pluto a planet?")
-    if (question5.toLowerCase() == "no") {
+    var question5 = prompt("In the TV show Breaking Bad, what was the name of the company Walter White previously co-founded with a college buddy? (oculus/grey matter/veritas corporation)")
+    if (question5.toLowerCase() == "grey matter") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(5).css("background-color", "chartreuse")
@@ -175,8 +175,8 @@ $(".cards div").eq(5).click(function(){
 })
 
 $(".cards div").eq(6).click(function(){
-    var question6 = prompt("Is Pluto a planet?")
-    if (question6.toLowerCase() == "no") {
+    var question6 = prompt("Finish this sentence: liquor before beer, you're in the clear; beer before liquor, (never sicker/that's the kicker/you're a city slicker)")
+    if (question6.toLowerCase() == "never sicker") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(6).css("background-color", "chartreuse")
@@ -200,8 +200,8 @@ $(".cards div").eq(6).click(function(){
 })
 
 $(".cards div").eq(7).click(function(){
-    var question7 = prompt("Is Pluto a planet?")
-    if (question7.toLowerCase() == "no") {
+    var question7 = prompt("Pizza is to beer as cheese is to (bread/wine/crackers)")
+    if (question7.toLowerCase() == "wine") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(7).css("background-color", "chartreuse")
@@ -225,8 +225,8 @@ $(".cards div").eq(7).click(function(){
 })
 
 $(".cards div").eq(8).click(function(){
-    var question8 = prompt("Is Pluto a planet?")
-    if (question8.toLowerCase() == "no") {
+    var question8 = prompt("What's your favorite band? (nicki minaj/you've probably never heard of them/aerosmith)")
+    if (question8.toLowerCase() == "aerosmith") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(8).css("background-color", "chartreuse")
@@ -250,8 +250,8 @@ $(".cards div").eq(8).click(function(){
 })
 
 $(".cards div").eq(9).click(function(){
-    var question9 = prompt("Is Pluto a planet?")
-    if (question9.toLowerCase() == "no") {
+    var question9 = prompt("How many problems do you have? (99 but a bitch ain't one/don't worry about a thing/too many problems, oh why am I here)")
+    if (question9.toLowerCase() == "99 but a bitch ain't one") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(9).css("background-color", "chartreuse")
@@ -275,8 +275,8 @@ $(".cards div").eq(9).click(function(){
 })
 
 $(".cards div").eq(10).click(function(){
-    var question10 = prompt("Is Pluto a planet?")
-    if (question10.toLowerCase() == "no") {
+    var question10 = prompt("If you give a mouse a cookie (he will be your loyal friend/all his friends will want one too/he will ask if you have a cigarette instead)")
+    if (question10.toLowerCase() == "all his friends will want one too") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(10).css("background-color", "chartreuse")
@@ -300,8 +300,8 @@ $(".cards div").eq(10).click(function(){
 })
 
 $(".cards div").eq(11).click(function(){
-    var question11 = prompt("Is Pluto a planet?")
-    if (question11.toLowerCase() == "no") {
+    var question11 = prompt("Has anyone really been far even as decided to use even go want to do look more like? (yes/only on the weekend/wtf)")
+    if (question11.toLowerCase() == "wtf") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(11).css("background-color", "chartreuse")
@@ -325,8 +325,8 @@ $(".cards div").eq(11).click(function(){
 })
 
 $(".cards div").eq(12).click(function(){
-    var question12 = prompt("Is Pluto a planet?")
-    if (question12.toLowerCase() == "no") {
+    var question12 = prompt("In America you search the web. In Soviet Russia, (they don't have the web/the web searches you/it is snowy, snowy day)")
+    if (question12.toLowerCase() == "the web searches you") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(12).css("background-color", "chartreuse")
@@ -350,8 +350,8 @@ $(".cards div").eq(12).click(function(){
 })
 
 $(".cards div").eq(13).click(function(){
-    var question13 = prompt("Is Pluto a planet?")
-    if (question13.toLowerCase() == "no") {
+    var question13 = prompt("What's the worst of these things? (lung cancer/poverty/when your golf glove wears faster over the calluses your tennis racquet gives you)")
+    if (question13.toLowerCase() == "when your golf glove wears faster over the calluses your tennis racquet gives you") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(13).css("background-color", "chartreuse")
@@ -375,8 +375,8 @@ $(".cards div").eq(13).click(function(){
 })
 
 $(".cards div").eq(14).click(function(){
-    var question14 = prompt("Is Pluto a planet?")
-    if (question14.toLowerCase() == "no") {
+    var question14 = prompt("What is America famous for? (freedom/fat people/spray cheese)")
+    if (question14.toLowerCase() == "spray cheese") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(14).css("background-color", "chartreuse")
@@ -385,6 +385,8 @@ $(".cards div").eq(14).click(function(){
       $(".score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(14).css("pointer-events", "none")
+      //display your final score
+      alert("Your final score is " + score + " out of 15")
     }
     else {
       alert("Incorrect.")
@@ -392,14 +394,17 @@ $(".cards div").eq(14).click(function(){
       $(".cards div").eq(14).css("background-color", "red")
       //turn off the box
       $(".cards div").eq(14).css("pointer-events", "none")
+      // display your final score
+      alert("Your final score is " + score + " out of 15")
+
     }
 })
 
 });
-//if question is answered correctly, display congratulatory message and increase score by 1
-//if question is answered incorrectly, display disapproving message and do not increase the score
+//if question is answered correctly, display congratulatory message and increase score by 1 DONE
+//if question is answered incorrectly, display disapproving message and do not increase the score DONE
 
 
-//alert results when all questions have been answered
+//alert results when all questions have been answered DONE
 //////////Icebox///////////
 //create button to alert a table of high scores//
