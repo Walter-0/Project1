@@ -1,9 +1,10 @@
 $(document).ready(function() {
     console.log( "ready!" );
 
+
 var user;
 var score = 0;
-//begin with all questions disabled
+//begin with all questions disabled DONE
 $(".cards div").css("pointer-events", "none")
 
 //add click listeners to the new game button DONE
@@ -19,210 +20,382 @@ $("button").click(function(){
 
 
 //add click listeners to each card DONE
-//prompt a question when a card is clicked
+//prompt a question when a card is clicked DONE
 //allow only the first question to be enabled after new game DONE
-//add 1 to the score if question is correctly answered
-//allow each question in order after the preceding question has been answered
+//add 1 to the score if question is correctly answered DONE
+//allow each question in order after the preceding question has been answered DONE
 
 $(".cards div").eq(0).click(function(){
     var question0 = prompt("Is Pluto a planet?")
     if (question0.toLowerCase() == "no") {
       alert("Correct!")
+      //turn the box green
       $(".cards div").eq(0).css("background-color", "chartreuse")
-      $(".cards div").eq(1).css("pointer-events", "auto")
+      //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score)
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(0).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(1).css("pointer-events", "auto")
     }
     else {
       alert("Incorrect.")
+      //turn the box red
       $(".cards div").eq(0).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(0).css("pointer-events", "none")
+      //enable the next box
       $(".cards div").eq(1).css("pointer-events", "auto")
-
-
     }
 })
 
 $(".cards div").eq(1).click(function(){
-  var question1 = prompt("Is Pluto a planet?")
-  if (question1.toLowerCase() == "no") {
-    alert("Correct!")
-    $(".cards div").eq(1).css("background-color", "chartreuse")
-    $(".cards div").eq(2).css("pointer-events", "auto")
-    score = score + 1
-    $(".score").eq(1).html("Score: " + score)
-
-  }
-  else {
-    alert("Incorrect.")
-    $(".cards div").eq(1).css("background-color", "red")
-    $(".cards div").eq(1).css("pointer-events", "auto")
-
-  }
-
-
+    var question1 = prompt("Is Pluto a planet?")
+    if (question1.toLowerCase() == "no") {
+      alert("Correct!")
+      //turn the box green
+      $(".cards div").eq(1).css("background-color", "chartreuse")
+      //increase score by 1
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(1).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(2).css("pointer-events", "auto")
+    }
+    else {
+      alert("Incorrect.")
+      //turn the box red
+      $(".cards div").eq(1).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(1).css("pointer-events", "none")
+      //enable the next bx
+      $(".cards div").eq(2).css("pointer-events", "auto")
+    }
 })
 
 $(".cards div").eq(2).click(function(){
-  var question2 = prompt("Is Pluto a planet?")
-  if (question2.toLowerCase() == "no") {
-    alert("Correct!")
-    $(".cards div").eq(2).css("background-color", "chartreuse")
-    $(".cards div").eq(3).css("pointer-events", "auto")
-  }
-  else {
-    alert("Incorrect. Try again.")
-  }
+    var question2 = prompt("Is Pluto a planet?")
+    if (question2.toLowerCase() == "no") {
+      alert("Correct!")
+      //turn the box green
+      $(".cards div").eq(2).css("background-color", "chartreuse")
+      //increase score by 1
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(2).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(3).css("pointer-events", "auto")
+    }
+    else {
+      alert("Incorrect.")
+      //turn the box red
+      $(".cards div").eq(2).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(2).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(3).css("pointer-events", "auto")
+    }
 })
 
 $(".cards div").eq(3).click(function(){
-  var question3 = prompt("Is Pluto a planet?")
-  if (question3.toLowerCase() == "no") {
-    alert("Correct!")
-    $(".cards div").eq(3).css("background-color", "chartreuse")
-    $(".cards div").eq(4).css("pointer-events", "auto")
-  }
-  else {
-    alert("Incorrect. Try again.")
-  }
+    var question3 = prompt("Is Pluto a planet?")
+    if (question3.toLowerCase() == "no") {
+      alert("Correct!")
+      //turn the box green
+      $(".cards div").eq(3).css("background-color", "chartreuse")
+      //increase score by 1
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(3).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(4).css("pointer-events", "auto")
+    }
+    else {
+      alert("Incorrect.")
+      //turn the box red
+      $(".cards div").eq(3).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(3).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(4).css("pointer-events", "auto")
+    }
 })
 
 $(".cards div").eq(4).click(function(){
-  var question4 = prompt("Is Pluto a planet?")
-  if (question4.toLowerCase() == "no") {
-    alert("Correct!")
-    $(".cards div").eq(4).css("background-color", "chartreuse")
-    $(".cards div").eq(5).css("pointer-events", "auto")
-  }
-  else {
-    alert("Incorrect. Try again.")
-  }
+    var question4 = prompt("Is Pluto a planet?")
+    if (question4.toLowerCase() == "no") {
+      alert("Correct!")
+      //turn the box green
+      $(".cards div").eq(4).css("background-color", "chartreuse")
+      //increase score by 1
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(4).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(5).css("pointer-events", "auto")
+    }
+    else {
+      alert("Incorrect.")
+      //turn the box red
+      $(".cards div").eq(4).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(4).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(5).css("pointer-events", "auto")
+    }
 })
-
-
 $(".cards div").eq(5).click(function(){
-  var question5 = prompt("Is Pluto a planet?")
-  if (question5.toLowerCase() == "no") {
-    alert("Correct!")
-    $(".cards div").eq(5).css("background-color", "chartreuse")
-    $(".cards div").eq(6).css("pointer-events", "auto")
-  }
-  else {
-    alert("Incorrect. Try again.")
-  }
+    var question5 = prompt("Is Pluto a planet?")
+    if (question5.toLowerCase() == "no") {
+      alert("Correct!")
+      //turn the box green
+      $(".cards div").eq(5).css("background-color", "chartreuse")
+      //increase score by 1
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(5).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(6).css("pointer-events", "auto")
+    }
+    else {
+      alert("Incorrect.")
+      //turn the box red
+      $(".cards div").eq(5).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(5).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(6).css("pointer-events", "auto")
+    }
 })
 
 $(".cards div").eq(6).click(function(){
-  var question6 = prompt("Is Pluto a planet?")
-  if (question6.toLowerCase() == "no") {
-    alert("Correct!")
-    $(".cards div").eq(6).css("background-color", "chartreuse")
-    $(".cards div").eq(7).css("pointer-events", "auto")
-  }
-  else {
-    alert("Incorrect. Try again.")
-  }
+    var question6 = prompt("Is Pluto a planet?")
+    if (question6.toLowerCase() == "no") {
+      alert("Correct!")
+      //turn the box green
+      $(".cards div").eq(6).css("background-color", "chartreuse")
+      //increase score by 1
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(6).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(7).css("pointer-events", "auto")
+    }
+    else {
+      alert("Incorrect.")
+      //turn the box red
+      $(".cards div").eq(6).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(6).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(7).css("pointer-events", "auto")
+    }
 })
 
 $(".cards div").eq(7).click(function(){
-  var question7 = prompt("Is Pluto a planet?")
-  if (question7.toLowerCase() == "no") {
-    alert("Correct!")
-    $(".cards div").eq(7).css("background-color", "chartreuse")
-    $(".cards div").eq(8).css("pointer-events", "auto")
-  }
-  else {
-    alert("Incorrect. Try again.")
-  }
+    var question7 = prompt("Is Pluto a planet?")
+    if (question7.toLowerCase() == "no") {
+      alert("Correct!")
+      //turn the box green
+      $(".cards div").eq(7).css("background-color", "chartreuse")
+      //increase score by 1
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(7).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(8).css("pointer-events", "auto")
+    }
+    else {
+      alert("Incorrect.")
+      //turn the box red
+      $(".cards div").eq(7).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(7).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(8).css("pointer-events", "auto")
+    }
 })
 
-
 $(".cards div").eq(8).click(function(){
-  var question8 = prompt("Is Pluto a planet?")
-  if (question8.toLowerCase() == "no") {
-    alert("Correct!")
-    $(".cards div").eq(8).css("background-color", "chartreuse")
-    $(".cards div").eq(9).css("pointer-events", "auto")
-  }
-  else {
-    alert("Incorrect. Try again.")
-  }
+    var question8 = prompt("Is Pluto a planet?")
+    if (question8.toLowerCase() == "no") {
+      alert("Correct!")
+      //turn the box green
+      $(".cards div").eq(8).css("background-color", "chartreuse")
+      //increase score by 1
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(8).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(9).css("pointer-events", "auto")
+    }
+    else {
+      alert("Incorrect.")
+      //turn the box red
+      $(".cards div").eq(8).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(8).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(9).css("pointer-events", "auto")
+    }
 })
 
 $(".cards div").eq(9).click(function(){
-  var question9 = prompt("Is Pluto a planet?")
-  if (question9.toLowerCase() == "no") {
-    alert("Correct!")
-    $(".cards div").eq(9).css("background-color", "chartreuse")
-    $(".cards div").eq(10).css("pointer-events", "auto")
-  }
-  else {
-    alert("Incorrect. Try again.")
-  }
+    var question9 = prompt("Is Pluto a planet?")
+    if (question9.toLowerCase() == "no") {
+      alert("Correct!")
+      //turn the box green
+      $(".cards div").eq(9).css("background-color", "chartreuse")
+      //increase score by 1
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(9).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(10).css("pointer-events", "auto")
+    }
+    else {
+      alert("Incorrect.")
+      //turn the box red
+      $(".cards div").eq(9).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(9).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(10).css("pointer-events", "auto")
+    }
 })
 
 $(".cards div").eq(10).click(function(){
-  var question10 = prompt("Is Pluto a planet?")
-  if (question10.toLowerCase() == "no") {
-    alert("Correct!")
-    $(".cards div").eq(10).css("background-color", "chartreuse")
-    $(".cards div").eq(11).css("pointer-events", "auto")
-  }
-  else {
-    alert("Incorrect. Try again.")
-  }
+    var question10 = prompt("Is Pluto a planet?")
+    if (question10.toLowerCase() == "no") {
+      alert("Correct!")
+      //turn the box green
+      $(".cards div").eq(10).css("background-color", "chartreuse")
+      //increase score by 1
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(10).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(11).css("pointer-events", "auto")
+    }
+    else {
+      alert("Incorrect.")
+      //turn the box red
+      $(".cards div").eq(10).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(10).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(11).css("pointer-events", "auto")
+    }
 })
 
-
 $(".cards div").eq(11).click(function(){
-  var question11 = prompt("Is Pluto a planet?")
-  if (question11.toLowerCase() == "no") {
-    alert("Correct!")
-    $(".cards div").eq(11).css("background-color", "chartreuse")
-    $(".cards div").eq(12).css("pointer-events", "auto")
-  }
-  else {
-    alert("Incorrect. Try again.")
-  }
+    var question11 = prompt("Is Pluto a planet?")
+    if (question11.toLowerCase() == "no") {
+      alert("Correct!")
+      //turn the box green
+      $(".cards div").eq(11).css("background-color", "chartreuse")
+      //increase score by 1
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(11).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(12).css("pointer-events", "auto")
+    }
+    else {
+      alert("Incorrect.")
+      //turn the box red
+      $(".cards div").eq(11).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(11).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(12).css("pointer-events", "auto")
+    }
 })
 
 $(".cards div").eq(12).click(function(){
-  var question12 = prompt("Is Pluto a planet?")
-  if (question12.toLowerCase() == "no") {
-    alert("Correct!")
-    $(".cards div").eq(13).css("background-color", "chartreuse")
-    $(".cards div").eq(13).css("pointer-events", "auto")
-  }
-  else {
-    alert("Incorrect. Try again.")
-  }
+    var question12 = prompt("Is Pluto a planet?")
+    if (question12.toLowerCase() == "no") {
+      alert("Correct!")
+      //turn the box green
+      $(".cards div").eq(12).css("background-color", "chartreuse")
+      //increase score by 1
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(12).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(13).css("pointer-events", "auto")
+    }
+    else {
+      alert("Incorrect.")
+      //turn the box red
+      $(".cards div").eq(12).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(12).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(13).css("pointer-events", "auto")
+    }
 })
 
 $(".cards div").eq(13).click(function(){
-  var question13 = prompt("Is Pluto a planet?")
-  if (question13.toLowerCase() == "no") {
-    alert("Correct!")
-    $(".cards div").eq(13).css("background-color", "chartreuse")
-    $(".cards div").eq(14).css("pointer-events", "auto")
-  }
-  else {
-    alert("Incorrect. Try again.")
-  }
+    var question13 = prompt("Is Pluto a planet?")
+    if (question13.toLowerCase() == "no") {
+      alert("Correct!")
+      //turn the box green
+      $(".cards div").eq(13).css("background-color", "chartreuse")
+      //increase score by 1
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(13).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(14).css("pointer-events", "auto")
+    }
+    else {
+      alert("Incorrect.")
+      //turn the box red
+      $(".cards div").eq(13).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(13).css("pointer-events", "none")
+      //enable the next box
+      $(".cards div").eq(14).css("pointer-events", "auto")
+    }
 })
-
 
 $(".cards div").eq(14).click(function(){
-  var question14 = prompt("Is Pluto a planet?")
-  if (question14.toLowerCase() == "no") {
-    alert("Correct!")
-    $(".cards div").eq(14).css("background-color", "chartreuse")
-  }
-  else {
-    alert("Incorrect. Try again.");
-  }
+    var question14 = prompt("Is Pluto a planet?")
+    if (question14.toLowerCase() == "no") {
+      alert("Correct!")
+      //turn the box green
+      $(".cards div").eq(14).css("background-color", "chartreuse")
+      //increase score by 1
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score);
+      //turn off the box
+      $(".cards div").eq(14).css("pointer-events", "none")
+    }
+    else {
+      alert("Incorrect.")
+      //turn the box red
+      $(".cards div").eq(14).css("background-color", "red")
+      //turn off the box
+      $(".cards div").eq(14).css("pointer-events", "none")
+    }
 })
 
-
-
+});
 //if question is answered correctly, display congratulatory message and increase score by 1
 //if question is answered incorrectly, display disapproving message and do not increase the score
 
@@ -230,6 +403,3 @@ $(".cards div").eq(14).click(function(){
 //alert results when all questions have been answered
 //////////Icebox///////////
 //create button to alert a table of high scores//
-
-
-});
