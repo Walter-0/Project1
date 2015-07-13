@@ -2,6 +2,7 @@ $(document).ready(function() {
     console.log( "ready!" );
 
 var user;
+var score = 0;
 //begin with all questions disabled
 $(".cards div").css("pointer-events", "none")
 
@@ -20,6 +21,7 @@ $("button").click(function(){
 //add click listeners to each card DONE
 //prompt a question when a card is clicked
 //allow only the first question to be enabled after new game DONE
+//add 1 to the score if question is correctly answered
 //allow each question in order after the preceding question has been answered
 
 $(".cards div").eq(0).click(function(){
@@ -28,9 +30,15 @@ $(".cards div").eq(0).click(function(){
       alert("Correct!")
       $(".cards div").eq(0).css("background-color", "chartreuse")
       $(".cards div").eq(1).css("pointer-events", "auto")
+      score = score + 1
+      $(".score").eq(0).html("Score: " + score)
     }
     else {
-      alert("Incorrect. Try again.")
+      alert("Incorrect.")
+      $(".cards div").eq(0).css("background-color", "red")
+      $(".cards div").eq(1).css("pointer-events", "auto")
+
+
     }
 })
 
@@ -40,9 +48,15 @@ $(".cards div").eq(1).click(function(){
     alert("Correct!")
     $(".cards div").eq(1).css("background-color", "chartreuse")
     $(".cards div").eq(2).css("pointer-events", "auto")
+    score = score + 1
+    $(".score").eq(1).html("Score: " + score)
+
   }
   else {
-    alert("Incorrect. Try again.")
+    alert("Incorrect.")
+    $(".cards div").eq(1).css("background-color", "red")
+    $(".cards div").eq(1).css("pointer-events", "auto")
+
   }
 
 
