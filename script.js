@@ -8,15 +8,19 @@ var score = 0;
 $(".cards div").css("pointer-events", "none")
 
 //add click listeners to the new game button DONE
-$("button").click(function(){
+$("#newGame").click(function(){
   console.log("started a new game")
   //when new game is clicked, prompt the user to enter their name DONE
   user = prompt("Please enter your name")
   //add short game description and instructions
-  alert("Hi " + user)
+  alert("Hi " + user + ", when you're ready, click the first box to begin.")
   $(".cards div").eq(0).css("pointer-events", "auto")
-
 })
+
+// //high score table
+// $("#highScore").click(function(){
+//   alert()
+// })
 
 
 //add click listeners to each card DONE
@@ -26,14 +30,14 @@ $("button").click(function(){
 //allow each question in order after the preceding question has been answered DONE
 
 $(".cards div").eq(0).click(function(){
-    var question0 = prompt("Is Pluto a planet?")
+    var question0 = prompt("Is Pluto a planet? (yes/no)")
     if (question0.toLowerCase() == "no") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(0).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(0).css("pointer-events", "none")
       //enable the next box
@@ -51,14 +55,14 @@ $(".cards div").eq(0).click(function(){
 })
 
 $(".cards div").eq(1).click(function(){
-    var question1 = prompt("Should you run from or fight a black bear? (run/fight)")
+    var question1 = prompt("Should you run from or fight a black bear? \n (run/fight)")
     if (question1.toLowerCase() == "fight") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(1).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(1).css("pointer-events", "none")
       //enable the next box
@@ -76,14 +80,14 @@ $(".cards div").eq(1).click(function(){
 })
 
 $(".cards div").eq(2).click(function(){
-    var question2 = prompt("Will a 12 lb bowling ball sink or float in the ocean? (sink/float)")
+    var question2 = prompt("Will a 12 lb bowling ball sink or float in the ocean? \n (sink/float)")
     if (question2.toLowerCase() == "float") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(2).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(2).css("pointer-events", "none")
       //enable the next box
@@ -101,14 +105,14 @@ $(".cards div").eq(2).click(function(){
 })
 
 $(".cards div").eq(3).click(function(){
-    var question3 = prompt("Middle age alchemists wanted to turn lead into what metal? (silver/gold/platinum)")
+    var question3 = prompt("Middle age alchemists wanted to turn lead into what metal? \n (silver/gold/platinum)")
     if (question3.toLowerCase() == "gold") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(3).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(3).css("pointer-events", "none")
       //enable the next box
@@ -126,14 +130,14 @@ $(".cards div").eq(3).click(function(){
 })
 
 $(".cards div").eq(4).click(function(){
-    var question4 = prompt("If someone is tripping, they are doing what? (drugs/falling down/acting foolish)")
+    var question4 = prompt("If someone is tripping, they are doing what? \n (drugs/falling down/acting foolish)")
     if (question4.toLowerCase() == "drugs") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(4).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(4).css("pointer-events", "none")
       //enable the next box
@@ -150,14 +154,14 @@ $(".cards div").eq(4).click(function(){
     }
 })
 $(".cards div").eq(5).click(function(){
-    var question5 = prompt("In the TV show Breaking Bad, what was the name of the company Walter White previously co-founded with a college buddy? (oculus/grey matter/veritas corporation)")
+    var question5 = prompt("In the TV show Breaking Bad, what was the name of the company Walter White previously co-founded with a college buddy? \n (oculus/grey matter/veritas corporation)")
     if (question5.toLowerCase() == "grey matter") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(5).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(5).css("pointer-events", "none")
       //enable the next box
@@ -175,14 +179,14 @@ $(".cards div").eq(5).click(function(){
 })
 
 $(".cards div").eq(6).click(function(){
-    var question6 = prompt("Finish this sentence: liquor before beer, you're in the clear; beer before liquor, (never sicker/that's the kicker/you're a city slicker)")
+    var question6 = prompt("Finish this sentence: liquor before beer, you're in the clear; beer before liquor, \n (never sicker/that's the kicker/you're a city slicker)")
     if (question6.toLowerCase() == "never sicker") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(6).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(6).css("pointer-events", "none")
       //enable the next box
@@ -200,14 +204,14 @@ $(".cards div").eq(6).click(function(){
 })
 
 $(".cards div").eq(7).click(function(){
-    var question7 = prompt("Pizza is to beer as cheese is to (bread/wine/crackers)")
+    var question7 = prompt("Pizza is to beer as cheese is to \n (bread/wine/crackers)")
     if (question7.toLowerCase() == "wine") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(7).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(7).css("pointer-events", "none")
       //enable the next box
@@ -225,14 +229,14 @@ $(".cards div").eq(7).click(function(){
 })
 
 $(".cards div").eq(8).click(function(){
-    var question8 = prompt("What's your favorite band? (nicki minaj/you've probably never heard of them/aerosmith)")
+    var question8 = prompt("What's your favorite band? \n (nicki minaj/you've probably never heard of them/aerosmith)")
     if (question8.toLowerCase() == "aerosmith") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(8).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(8).css("pointer-events", "none")
       //enable the next box
@@ -250,14 +254,14 @@ $(".cards div").eq(8).click(function(){
 })
 
 $(".cards div").eq(9).click(function(){
-    var question9 = prompt("How many problems do you have? (99 but a bitch ain't one/don't worry about a thing/too many problems, oh why am I here)")
+    var question9 = prompt("How many problems do you have? \n (99 but a bitch ain't one/don't worry about a thing/too many problems, oh why am I here)")
     if (question9.toLowerCase() == "99 but a bitch ain't one") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(9).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(9).css("pointer-events", "none")
       //enable the next box
@@ -275,14 +279,14 @@ $(".cards div").eq(9).click(function(){
 })
 
 $(".cards div").eq(10).click(function(){
-    var question10 = prompt("If you give a mouse a cookie (he will be your loyal friend/all his friends will want one too/he will ask if you have a cigarette instead)")
+    var question10 = prompt("If you give a mouse a cookie \n (he will be your loyal friend/all his friends will want one too/he will ask if you have a cigarette instead)")
     if (question10.toLowerCase() == "all his friends will want one too") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(10).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(10).css("pointer-events", "none")
       //enable the next box
@@ -300,14 +304,14 @@ $(".cards div").eq(10).click(function(){
 })
 
 $(".cards div").eq(11).click(function(){
-    var question11 = prompt("Has anyone really been far even as decided to use even go want to do look more like? (yes/only on the weekend/wtf)")
+    var question11 = prompt("Has anyone really been far even as decided to use even go want to do look more like? \n (yes/only on the weekend/wtf)")
     if (question11.toLowerCase() == "wtf") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(11).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(11).css("pointer-events", "none")
       //enable the next box
@@ -325,14 +329,14 @@ $(".cards div").eq(11).click(function(){
 })
 
 $(".cards div").eq(12).click(function(){
-    var question12 = prompt("In America you search the web. In Soviet Russia, (they don't have the web/the web searches you/it is snowy, snowy day)")
+    var question12 = prompt("In America you search the web. In Soviet Russia, \n (they don't have the web/the web searches you/it is snowy, snowy day)")
     if (question12.toLowerCase() == "the web searches you") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(12).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(12).css("pointer-events", "none")
       //enable the next box
@@ -350,14 +354,14 @@ $(".cards div").eq(12).click(function(){
 })
 
 $(".cards div").eq(13).click(function(){
-    var question13 = prompt("What's the worst of these things? (lung cancer/poverty/when your golf glove wears faster over the calluses your tennis racquet gives you)")
+    var question13 = prompt("What's the worst of these things? \n (lung cancer/poverty/when your golf glove wears faster over the calluses your tennis racquet gives you)")
     if (question13.toLowerCase() == "when your golf glove wears faster over the calluses your tennis racquet gives you") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(13).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(13).css("pointer-events", "none")
       //enable the next box
@@ -375,14 +379,14 @@ $(".cards div").eq(13).click(function(){
 })
 
 $(".cards div").eq(14).click(function(){
-    var question14 = prompt("What is America famous for? (freedom/fat people/spray cheese)")
+    var question14 = prompt("What is America famous for? \n (freedom/fat people/spray cheese)")
     if (question14.toLowerCase() == "spray cheese") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(14).css("background-color", "chartreuse")
       //increase score by 1
       score = score + 1
-      $(".score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(14).css("pointer-events", "none")
       //display your final score
