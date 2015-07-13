@@ -4,7 +4,7 @@ This is a game of skill and comedy to test your knowledge about the internet. No
 User Stories:
 1. As a user, I should be able to input answers to prompted questions.
 2. As a user, I should be able to see a win/loss alert.
-3. As a user, I should be able to visually select questions in order.
+3. As a user, I should be able to visually select questions in order. DONE
 4. As a user, I should be able to see my score at the end of the game.
 5. ** As a user, I should be able to compare my scores to others'. **
 6. As a user, I should be able to enter my name. DONE
