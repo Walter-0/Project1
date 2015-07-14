@@ -3,7 +3,8 @@ $(document).ready(function() {
 
 
 var user;
-var score = 0;
+var score;
+var finalScore;
 
 
 
@@ -12,7 +13,7 @@ $(".cards div").css("pointer-events", "none")
 
 //add click listeners to the new game button DONE
 $("#newGame").click(function(){
-  console.log("started a new game")
+  console.log("New Game")
   //when new game is clicked, prompt the user to enter their name DONE
   user = prompt("Please enter your name")
   //add short game description and instructions
@@ -22,13 +23,32 @@ $("#newGame").click(function(){
   $(".cards div").css("pointer-events", "none")
   $(".cards div").eq(0).css("pointer-events", "auto")
   score = 0;
+  finalScore = 0;
   $("#score").eq(0).html("Score: " + score);
 })
 
-//high score table
+
+// var ranking = function( user, finalScore){
+//   this.name = user
+//   this.score = finalScore
+// }
+//
+// //high score table
+// $("#highScore").click(function(){
+//   var ranking1 = new ranking(user, finalScore)
+//   alert(ranking1.name + "'s score is " + ranking1.score)
+// })
+
 $("#highScore").click(function(){
-    alert(user + score)
+  $(".cards div").css("background-image", "url(http://i.imgur.com/QgJUL.gif)")
+  $(".cards div").css("background-color", " ")
+
+  alert("ayyyyy")
 })
+
+
+
+
 
 
 //add click listeners to each card DONE
@@ -394,7 +414,7 @@ $(".cards div").eq(14).click(function(){
       $(".cards div").eq(14).css("background-color", "chartreuse")
       //increase score by 1
       finalScore = score + 1
-      $("#score").eq(0).html("Score: " + score);
+      $("#score").eq(0).html("Score: " + finalScore);
       //turn off the box
       $(".cards div").eq(14).css("pointer-events", "none")
       //display your final score
@@ -408,6 +428,7 @@ $(".cards div").eq(14).click(function(){
       $(".cards div").eq(14).css("pointer-events", "none")
       // display your final score
       finalScore = score
+      $("#score").eq(0).html("Score: " + finalScore);
       alert("Your final score is " + finalScore + " out of 15")
 
     }
