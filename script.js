@@ -4,6 +4,10 @@ $(document).ready(function() {
 
 var user;
 var score = 0;
+var finalScore;
+
+
+
 //begin with all questions disabled DONE
 $(".cards div").css("pointer-events", "none")
 
@@ -17,10 +21,10 @@ $("#newGame").click(function(){
   $(".cards div").eq(0).css("pointer-events", "auto")
 })
 
-// //high score table
-// $("#highScore").click(function(){
-//   alert()
-// })
+//high score table
+$("#highScore").click(function(){
+  alert()
+})
 
 
 //add click listeners to each card DONE
@@ -154,8 +158,8 @@ $(".cards div").eq(4).click(function(){
     }
 })
 $(".cards div").eq(5).click(function(){
-    var question5 = prompt("In the TV show Breaking Bad, what was the name of the company Walter White previously co-founded with a college buddy? \n (oculus/grey matter/veritas corporation)")
-    if (question5.toLowerCase() == "grey matter") {
+    var question5 = prompt("In the TV show Breaking Bad, what was the name of the fast-food chain Walter White frequently visits? \n (los pollos hermanos/hank's subs/la cantina)")
+    if (question5.toLowerCase() == "los pollos hermanos") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(5).css("background-color", "chartreuse")
@@ -204,8 +208,8 @@ $(".cards div").eq(6).click(function(){
 })
 
 $(".cards div").eq(7).click(function(){
-    var question7 = prompt("Pizza is to beer as cheese is to \n (bread/wine/crackers)")
-    if (question7.toLowerCase() == "wine") {
+    var question7 = prompt("Who is Magic Mike \n (a man/a myth/a legend)")
+    if (question7.toLowerCase() == "a legend") {
       alert("Correct!")
       //turn the box green
       $(".cards div").eq(7).css("background-color", "chartreuse")
@@ -385,12 +389,12 @@ $(".cards div").eq(14).click(function(){
       //turn the box green
       $(".cards div").eq(14).css("background-color", "chartreuse")
       //increase score by 1
-      score = score + 1
+      finalScore = score + 1
       $("#score").eq(0).html("Score: " + score);
       //turn off the box
       $(".cards div").eq(14).css("pointer-events", "none")
       //display your final score
-      alert("Your final score is " + score + " out of 15")
+      alert("Your final score is " + finalScore + " out of 15")
     }
     else {
       alert("Incorrect.")
@@ -399,10 +403,18 @@ $(".cards div").eq(14).click(function(){
       //turn off the box
       $(".cards div").eq(14).css("pointer-events", "none")
       // display your final score
-      alert("Your final score is " + score + " out of 15")
+      finalScore = score
+      alert("Your final score is " + finalScore + " out of 15")
 
     }
 })
+
+function highScores() {
+  this.user = user;
+  this.getFinalScore = function() {
+
+  };
+}
 
 });
 //if question is answered correctly, display congratulatory message and increase score by 1 DONE
