@@ -4,7 +4,6 @@ $(document).ready(function() {
 
 var user;
 var score = 0;
-var finalScore;
 
 
 
@@ -18,12 +17,17 @@ $("#newGame").click(function(){
   user = prompt("Please enter your name")
   //add short game description and instructions
   alert("Hi " + user + ", when you're ready, click the first box to begin.")
+  //reset box color, click state, and score
+  $(".cards div").css("background-color", "lemonchiffon")
+  $(".cards div").css("pointer-events", "none")
   $(".cards div").eq(0).css("pointer-events", "auto")
+  score = 0;
+  $("#score").eq(0).html("Score: " + score);
 })
 
 //high score table
 $("#highScore").click(function(){
-  alert()
+    alert(user + score)
 })
 
 
@@ -409,12 +413,7 @@ $(".cards div").eq(14).click(function(){
     }
 })
 
-function highScores() {
-  this.user = user;
-  this.getFinalScore = function() {
 
-  };
-}
 
 });
 //if question is answered correctly, display congratulatory message and increase score by 1 DONE
