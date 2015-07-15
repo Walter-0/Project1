@@ -1,5 +1,5 @@
-Project 1: Internet Trivia
-This is a game of skill and comedy to test your knowledge about the internet. No, not how the internet works, but its integral and often meaningless content.
+Project 1: Random Trivia
+This is a game of skill and comedy to test your knowledge about some cool stuff.
 
 User Stories:
 1. As a user, I should be able to input answers to prompted questions. DONE
@@ -16,5 +16,9 @@ HTML/CSS pseudocode
 -create score card DONE
 -** create button to see high scores **
 
-JS pseudocode
--
+
+DONE = complete
+** = icebox items
+
+Final Remarks:
+I attempted the high score list part of the bonus but I could not figure out persistent storage. Instead I added a surprise button. My code is not as DRY as I'd like it to be, but having each box/question as an independent element made it difficult to organize. 
