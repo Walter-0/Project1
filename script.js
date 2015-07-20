@@ -10,7 +10,7 @@ var finalScore;
 
 //begin with all questions disabled DONE
 $(".cards div").css("pointer-events", "none")
-$("#highScore").css("pointer-events", "none")
+$("#highScore").css("pointer-events", "none") // I didn't know about this in css, interesting solution!
 
 //add click listeners to the new game button DONE
 $("#newGame").click(function(){
@@ -19,7 +19,12 @@ $("#newGame").click(function(){
   user = prompt("Please enter your name")
   //add short game description and instructions
   alert("Hi " + user + ", when you're ready, click the first box to begin. Please type a,b, or c to input your answer")
+  // I'd encourage you to try to find a way to implement future projects without alerts! They
+  // can be very distracting to most users, and so aren't a best pracitce.
+  
+
   //reset box color, click state, and score
+  // this is a good example of when to use comments above :)
   $(".cards div").css("background-color", "lemonchiffon")
   $(".cards div").css("pointer-events", "none")
   $(".cards div").eq(0).css("pointer-events", "auto")
@@ -61,6 +66,11 @@ $("#highScore").click(function(){
 //allow only the first question to be enabled after new game DONE
 //add 1 to the score if question is correctly answered DONE
 //allow each question in order after the preceding question has been answered DONE
+
+// Your general approach to handling one question is pretty good, but it's really 
+// bad practice to have so much repeated code for each question! Let's talk in our 
+// next one on one about how we could refactor this to use an array of question
+// objects, and reduce this code to about 1/15th it's original size!
 
 $(".cards div").eq(0).click(function(){
     var question0 = prompt("Is Pluto a planet? (yes/no)")
